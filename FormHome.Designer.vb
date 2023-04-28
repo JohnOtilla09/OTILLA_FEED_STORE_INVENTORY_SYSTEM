@@ -22,11 +22,12 @@ Partial Class FormHome
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgBestSellingProductsTable = New System.Windows.Forms.DataGridView()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.exportBtn = New System.Windows.Forms.Button()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.IconPictureBox2 = New FontAwesome.Sharp.IconPictureBox()
         Me.Panel8 = New System.Windows.Forms.Panel()
@@ -67,12 +68,12 @@ Partial Class FormHome
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.SystemColors.Control
-        Me.Label1.Font = New System.Drawing.Font("Arial", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point)
+        Me.Label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(252, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(43, 23)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(113, 24)
+        Me.Label1.Size = New System.Drawing.Size(135, 27)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Dashboard"
         '
@@ -81,32 +82,32 @@ Partial Class FormHome
         Me.dgBestSellingProductsTable.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.dgBestSellingProductsTable.BackgroundColor = System.Drawing.Color.White
         Me.dgBestSellingProductsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(5)
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgBestSellingProductsTable.DefaultCellStyle = DataGridViewCellStyle2
-        Me.dgBestSellingProductsTable.Location = New System.Drawing.Point(103, 244)
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgBestSellingProductsTable.DefaultCellStyle = DataGridViewCellStyle1
+        Me.dgBestSellingProductsTable.Location = New System.Drawing.Point(53, 244)
         Me.dgBestSellingProductsTable.Name = "dgBestSellingProductsTable"
         Me.dgBestSellingProductsTable.RowHeadersWidth = 51
         Me.dgBestSellingProductsTable.RowTemplate.Height = 29
-        Me.dgBestSellingProductsTable.Size = New System.Drawing.Size(808, 321)
+        Me.dgBestSellingProductsTable.Size = New System.Drawing.Size(585, 347)
         Me.dgBestSellingProductsTable.TabIndex = 6
         '
         'Label5
         '
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.SystemColors.Control
-        Me.Label5.Font = New System.Drawing.Font("Arial", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point)
+        Me.Label5.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label5.Font = New System.Drawing.Font("Bernard MT Condensed", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(252, Byte), Integer))
         Me.Label5.Location = New System.Drawing.Point(384, 186)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(214, 24)
+        Me.Label5.Size = New System.Drawing.Size(254, 36)
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "Best Selling Products"
         '
@@ -114,6 +115,7 @@ Partial Class FormHome
         '
         Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.exportBtn)
         Me.Panel1.Controls.Add(Me.Panel7)
         Me.Panel1.Controls.Add(Me.Panel8)
         Me.Panel1.Controls.Add(Me.Panel9)
@@ -126,8 +128,19 @@ Partial Class FormHome
         Me.Panel1.Controls.Add(Me.dgBestSellingProductsTable)
         Me.Panel1.Location = New System.Drawing.Point(-12, 55)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1093, 631)
+        Me.Panel1.Size = New System.Drawing.Size(1093, 705)
         Me.Panel1.TabIndex = 8
+        '
+        'exportBtn
+        '
+        Me.exportBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.exportBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.exportBtn.Location = New System.Drawing.Point(694, 244)
+        Me.exportBtn.Name = "exportBtn"
+        Me.exportBtn.Size = New System.Drawing.Size(257, 65)
+        Me.exportBtn.TabIndex = 17
+        Me.exportBtn.Text = "Export to Excel"
+        Me.exportBtn.UseVisualStyleBackColor = False
         '
         'Panel7
         '
@@ -239,10 +252,10 @@ Partial Class FormHome
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Arial", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point)
-        Me.Label10.Location = New System.Drawing.Point(17, 83)
+        Me.Label10.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label10.Location = New System.Drawing.Point(17, 78)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(70, 17)
+        Me.Label10.Size = New System.Drawing.Size(82, 23)
         Me.Label10.TabIndex = 17
         Me.Label10.Text = "Amount:"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -250,10 +263,10 @@ Partial Class FormHome
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label4.Location = New System.Drawing.Point(111, 24)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(96, 23)
+        Me.Label4.Size = New System.Drawing.Size(119, 27)
         Me.Label4.TabIndex = 15
         Me.Label4.Text = "CHICKEN"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -272,10 +285,10 @@ Partial Class FormHome
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Arial", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point)
-        Me.Label9.Location = New System.Drawing.Point(15, 83)
+        Me.Label9.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label9.Location = New System.Drawing.Point(15, 78)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(70, 17)
+        Me.Label9.Size = New System.Drawing.Size(82, 23)
         Me.Label9.TabIndex = 16
         Me.Label9.Text = "Amount:"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -283,10 +296,10 @@ Partial Class FormHome
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label3.Location = New System.Drawing.Point(124, 24)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(56, 23)
+        Me.Label3.Size = New System.Drawing.Size(65, 27)
         Me.Label3.TabIndex = 14
         Me.Label3.Text = "DOG"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -305,10 +318,10 @@ Partial Class FormHome
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Arial", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point)
-        Me.Label8.Location = New System.Drawing.Point(15, 83)
+        Me.Label8.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label8.Location = New System.Drawing.Point(15, 78)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(70, 17)
+        Me.Label8.Size = New System.Drawing.Size(82, 23)
         Me.Label8.TabIndex = 15
         Me.Label8.Text = "Amount:"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -316,10 +329,10 @@ Partial Class FormHome
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label6.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label6.Location = New System.Drawing.Point(127, 24)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(48, 23)
+        Me.Label6.Size = New System.Drawing.Size(60, 27)
         Me.Label6.TabIndex = 16
         Me.Label6.Text = "CAT"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -338,10 +351,10 @@ Partial Class FormHome
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Arial", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point)
-        Me.Label7.Location = New System.Drawing.Point(13, 81)
+        Me.Label7.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label7.Location = New System.Drawing.Point(13, 76)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(70, 17)
+        Me.Label7.Size = New System.Drawing.Size(82, 23)
         Me.Label7.TabIndex = 14
         Me.Label7.Text = "Amount:"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -349,10 +362,10 @@ Partial Class FormHome
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label2.Location = New System.Drawing.Point(127, 22)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(45, 23)
+        Me.Label2.Size = New System.Drawing.Size(52, 27)
         Me.Label2.TabIndex = 13
         Me.Label2.Text = "PIG"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -361,7 +374,7 @@ Partial Class FormHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ClientSize = New System.Drawing.Size(1011, 673)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
@@ -416,4 +429,5 @@ Partial Class FormHome
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
+    Friend WithEvents exportBtn As Button
 End Class

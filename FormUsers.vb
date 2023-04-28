@@ -13,7 +13,7 @@ Public Class FormUsers
         Dim mydataAdapter As New MySqlDataAdapter
         Dim mydatatable As New DataTable
 
-        strSQL = "select lastname, firstname, gmail, birthday, address from users"
+        strSQL = "select lastname as Lastname, firstname as Firstname, gmail as Gmails, address from users"
 
         Connect_to_DB()
         With Me
@@ -44,5 +44,7 @@ Public Class FormUsers
         End With
     End Sub
 
-
+    Private Sub exportBtn_Click(sender As Object, e As EventArgs) Handles exportBtn.Click
+        Call importToExcel(Me.dgUserTable, "Users.xlsx", 5)
+    End Sub
 End Class

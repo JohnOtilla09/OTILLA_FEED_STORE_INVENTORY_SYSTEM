@@ -46,7 +46,7 @@ Public Class FormTransaction
         Dim mydataAdapter As New MySqlDataAdapter
         Dim mydatatable As New DataTable
 
-        strSQL = "select users.firstname, transactions.date, products.prod_name, types.type, transactions.quantity, transactions.total_amount" &
+        strSQL = "select users.firstname as Firstname, transactions.date  as Date, products.prod_name as Product_Name, types.type Type, transactions.quantity as Quantity, transactions.total_amount as Total" &
                 " from transactions" &
                 " inner join users" &
                 " on transactions.user_id = users.user_id" &
@@ -87,5 +87,9 @@ Public Class FormTransaction
 
     Private Sub FormTransaction_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         transactionTable()
+    End Sub
+
+    Private Sub exportBtn_Click(sender As Object, e As EventArgs) Handles exportBtn.Click
+        Call importToExcel(Me.dgTransactionReport, "Product_Transactions.xlsx", 4)
     End Sub
 End Class

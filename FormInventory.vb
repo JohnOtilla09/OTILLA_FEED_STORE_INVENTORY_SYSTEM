@@ -55,7 +55,7 @@ Public Class FormInventory
         Dim mydataAdapter As New MySqlDataAdapter
         Dim mydatatable As New DataTable
 
-        strSQL = "select products.prod_name, types.type, products.brand, products.stock, products.price" &
+        strSQL = "select products.prod_name as Product_Name, types.type as Type, products.brand as Brand, products.stock as Stocks, products.price as Price" &
                 " from products" &
                 " inner join types" &
                 " on products.type_id = types.type_id"
@@ -77,7 +77,7 @@ Public Class FormInventory
                 .dgInventoryTable.EndEdit()
                 .dgInventoryTable.DataSource = mydatatable
                 .dgInventoryTable.ReadOnly = True
-                .dgInventoryTable.ScrollBars = ScrollBars.Vertical
+                .dgInventoryTable.ScrollBars = ScrollBars.Both
                 .dgInventoryTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells
 
             Catch ex As MySqlException
@@ -87,6 +87,10 @@ Public Class FormInventory
             mycommand = Nothing
             Disconnect_to_DB()
         End With
+    End Sub
+
+    Private Sub exportBtn_Click(sender As Object, e As EventArgs) Handles exportBtn.Click
+        Call importToExcel(Me.dgInventoryTable, "Product_Inventory.xlsx", 3)
     End Sub
 End Class
 

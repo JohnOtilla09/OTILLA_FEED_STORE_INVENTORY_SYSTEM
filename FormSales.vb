@@ -15,7 +15,7 @@ Public Class FormSales
         Dim mydataAdapter As New MySqlDataAdapter
         Dim mydatatable As New DataTable
 
-        strSQL = "SELECT products.prod_name, types.type, products.price, total_income_per_products.quantity_sold, total_income_per_products.total_product_income" &
+        strSQL = "SELECT products.prod_name as Product_Name, types.type as Type, products.price as Price, total_income_per_products.quantity_sold as Quantity_Sold, total_income_per_products.total_product_income as Total_Sales" &
                 " FROM total_income_per_products" &
                 " INNER JOIN products ON products.prod_id = total_income_per_products.prod_id" &
                 " INNER JOIN types ON types.type_id = products.type_id" &
@@ -38,7 +38,7 @@ Public Class FormSales
                 .dgSalesTable.EndEdit()
                 .dgSalesTable.DataSource = mydatatable
                 .dgSalesTable.ReadOnly = True
-                .dgSalesTable.ScrollBars = ScrollBars.Vertical
+                .dgSalesTable.ScrollBars = ScrollBars.Both
                 .dgSalesTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells
 
             Catch ex As MySqlException
@@ -48,5 +48,9 @@ Public Class FormSales
             mycommand = Nothing
             Disconnect_to_DB()
         End With
+    End Sub
+
+    Private Sub exportBtn_Click(sender As Object, e As EventArgs) Handles exportBtn.Click
+        Call importToExcel(Me.dgSalesTable, "Product_Sales.xlsx", 2)
     End Sub
 End Class

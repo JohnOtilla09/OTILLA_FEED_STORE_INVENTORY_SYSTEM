@@ -204,6 +204,7 @@ Partial Class FormLandingPage
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Elephant", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(236, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(520, 26)
@@ -214,7 +215,7 @@ Partial Class FormLandingPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ClientSize = New System.Drawing.Size(1234, 754)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PanelContainer)

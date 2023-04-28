@@ -23,6 +23,7 @@ Partial Class FormUsers
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.exportBtn = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.addBtn = New System.Windows.Forms.Button()
@@ -38,6 +39,7 @@ Partial Class FormUsers
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.exportBtn)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.addBtn)
@@ -50,11 +52,22 @@ Partial Class FormUsers
         Me.Panel1.Size = New System.Drawing.Size(1011, 673)
         Me.Panel1.TabIndex = 19
         '
+        'exportBtn
+        '
+        Me.exportBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.exportBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.exportBtn.Location = New System.Drawing.Point(689, 363)
+        Me.exportBtn.Name = "exportBtn"
+        Me.exportBtn.Size = New System.Drawing.Size(257, 65)
+        Me.exportBtn.TabIndex = 24
+        Me.exportBtn.Text = "Export to Excel"
+        Me.exportBtn.UseVisualStyleBackColor = False
+        '
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.Button2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button2.Location = New System.Drawing.Point(688, 265)
+        Me.Button2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Button2.Location = New System.Drawing.Point(689, 292)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(257, 65)
         Me.Button2.TabIndex = 23
@@ -64,8 +77,8 @@ Partial Class FormUsers
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.Button1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.Location = New System.Drawing.Point(688, 194)
+        Me.Button1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Button1.Location = New System.Drawing.Point(689, 221)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(257, 65)
         Me.Button1.TabIndex = 22
@@ -75,8 +88,8 @@ Partial Class FormUsers
         'addBtn
         '
         Me.addBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.addBtn.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.addBtn.Location = New System.Drawing.Point(688, 123)
+        Me.addBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.addBtn.Location = New System.Drawing.Point(689, 150)
         Me.addBtn.Name = "addBtn"
         Me.addBtn.Size = New System.Drawing.Size(257, 65)
         Me.addBtn.TabIndex = 21
@@ -87,34 +100,36 @@ Partial Class FormUsers
         '
         Me.dgUserTable.BackgroundColor = System.Drawing.Color.White
         Me.dgUserTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgUserTable.Location = New System.Drawing.Point(102, 123)
+        Me.dgUserTable.Location = New System.Drawing.Point(63, 150)
         Me.dgUserTable.Name = "dgUserTable"
         Me.dgUserTable.RowHeadersWidth = 51
         Me.dgUserTable.RowTemplate.Height = 29
-        Me.dgUserTable.Size = New System.Drawing.Size(536, 463)
+        Me.dgUserTable.Size = New System.Drawing.Size(575, 428)
         Me.dgUserTable.TabIndex = 20
         '
         'searchButton
         '
+        Me.searchButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.searchButton.FlatAppearance.BorderSize = 0
         Me.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.searchButton.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.searchButton.ForeColor = System.Drawing.Color.White
         Me.searchButton.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass
-        Me.searchButton.IconColor = System.Drawing.Color.Black
+        Me.searchButton.IconColor = System.Drawing.Color.White
         Me.searchButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.searchButton.IconSize = 25
-        Me.searchButton.Location = New System.Drawing.Point(343, 79)
+        Me.searchButton.Location = New System.Drawing.Point(304, 92)
         Me.searchButton.Name = "searchButton"
         Me.searchButton.Size = New System.Drawing.Size(116, 41)
         Me.searchButton.TabIndex = 19
         Me.searchButton.Text = "Search"
         Me.searchButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.searchButton.UseVisualStyleBackColor = True
+        Me.searchButton.UseVisualStyleBackColor = False
         '
         'searchTxt
         '
         Me.searchTxt.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.searchTxt.Location = New System.Drawing.Point(102, 83)
+        Me.searchTxt.Location = New System.Drawing.Point(63, 99)
         Me.searchTxt.Name = "searchTxt"
         Me.searchTxt.Size = New System.Drawing.Size(235, 34)
         Me.searchTxt.TabIndex = 18
@@ -122,24 +137,24 @@ Partial Class FormUsers
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.SystemColors.Control
-        Me.Label5.Font = New System.Drawing.Font("Arial", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point)
+        Me.Label5.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label5.Font = New System.Drawing.Font("Bernard MT Condensed", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(422, 24)
+        Me.Label5.Location = New System.Drawing.Point(404, 39)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(146, 24)
+        Me.Label5.Size = New System.Drawing.Size(169, 36)
         Me.Label5.TabIndex = 12
         Me.Label5.Text = "User Accounts"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.SystemColors.Control
-        Me.Label2.Font = New System.Drawing.Font("Arial", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point)
+        Me.Label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(252, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(43, 21)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(63, 24)
+        Me.Label2.Size = New System.Drawing.Size(77, 27)
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "Users"
         '
@@ -147,6 +162,7 @@ Partial Class FormUsers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ClientSize = New System.Drawing.Size(993, 651)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label2)
@@ -170,4 +186,5 @@ Partial Class FormUsers
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents addBtn As Button
+    Friend WithEvents exportBtn As Button
 End Class
