@@ -43,7 +43,6 @@ Module Module1
 
         xlsApp = New Excel.Application
         xlsApp.Visible = False
-        MessageBox.Show(xlsPath & templatefilename)
         xlsWB = xlsApp.Workbooks.Open(xlsPath & templatefilename)
 
         xlsSheet = xlsWB.Worksheets(1)
