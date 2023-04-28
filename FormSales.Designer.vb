@@ -110,7 +110,7 @@ Partial Class FormSales
         Me.exportBtn.Name = "exportBtn"
         Me.exportBtn.Size = New System.Drawing.Size(257, 65)
         Me.exportBtn.TabIndex = 18
-        Me.exportBtn.Text = "Export to Excel"
+        Me.exportBtn.Text = "Export"
         Me.exportBtn.UseVisualStyleBackColor = False
         '
         'searchButton

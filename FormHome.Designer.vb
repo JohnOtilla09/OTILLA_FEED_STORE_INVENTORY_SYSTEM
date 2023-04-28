@@ -139,7 +139,7 @@ Partial Class FormHome
         Me.exportBtn.Name = "exportBtn"
         Me.exportBtn.Size = New System.Drawing.Size(257, 65)
         Me.exportBtn.TabIndex = 17
-        Me.exportBtn.Text = "Export to Excel"
+        Me.exportBtn.Text = "Export"
         Me.exportBtn.UseVisualStyleBackColor = False
         '
         'Panel7

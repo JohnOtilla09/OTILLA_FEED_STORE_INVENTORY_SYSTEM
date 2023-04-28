@@ -68,7 +68,7 @@ Module Module1
         templatefilename = templatefilename.Replace(".xlsx", "")
         templatefilename = templatefilename.Replace(".xls", "")
         Dim myfilename As String = templatefilename & " " & currentDate.ToString("MM-dd-yyyy hh-mm-ss") & ".xlsx"
-        MsgBox(myfilename & "is successfully created!")
+        MsgBox(myfilename & " is successfully created!")
         xlsSheet.Protect(strpassword)
         xlsApp.ActiveWindow.View = Excel.XlWindowView.xlPageLayoutView
         xlsApp.ActiveWindow.DisplayGridlines = False

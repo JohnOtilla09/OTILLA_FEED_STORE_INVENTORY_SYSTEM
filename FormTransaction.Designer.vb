@@ -61,7 +61,7 @@ Partial Class FormTransaction
         Me.exportBtn.Name = "exportBtn"
         Me.exportBtn.Size = New System.Drawing.Size(257, 65)
         Me.exportBtn.TabIndex = 19
-        Me.exportBtn.Text = "Export to Excel"
+        Me.exportBtn.Text = "Export"
         Me.exportBtn.UseVisualStyleBackColor = False
         '
         'updateBtn
@@ -83,7 +83,7 @@ Partial Class FormTransaction
         Me.uploadBtn.Name = "uploadBtn"
         Me.uploadBtn.Size = New System.Drawing.Size(257, 65)
         Me.uploadBtn.TabIndex = 20
-        Me.uploadBtn.Text = "Import from CSV"
+        Me.uploadBtn.Text = "Import"
         Me.uploadBtn.UseVisualStyleBackColor = False
         '
         'searchButton
