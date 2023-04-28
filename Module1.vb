@@ -6,11 +6,6 @@ Module Module1
     Public myConnectionString As String
     Public strSQL As String
 
-    Public currentDate As DateTime = DateTime.Now
-    Public strpassword = ""
-    Public xlsPath As String = "D:\Github Clone\OTILLA_FEED_STORE_INVENTORY_SYSTEM\dataXls\Template\"
-    Public xlsFiles As String = "D:\Github Clone\OTILLA_FEED_STORE_INVENTORY_SYSTEM\dataXls\"
-
     Public Sub Connect_to_DB()
         myConnectionString = "server=127.0.0.1;" _
                     & "uid=root;" _
@@ -37,6 +32,11 @@ Module Module1
     End Sub
 
     Public Sub importToExcel(ByVal mydg As DataGridView, ByVal templatefilename As String, ByVal page As Integer)
+        Dim currentDate As DateTime = DateTime.Now
+        Dim strpassword As String = "123456789"
+        Dim xlsPath As String = "D:\Github Clone\OTILLA_FEED_STORE_INVENTORY_SYSTEM\dataXls\Template\"
+        Dim xlsFiles As String = "D:\Github Clone\OTILLA_FEED_STORE_INVENTORY_SYSTEM\dataXls\"
+
         Dim xlsApp As Excel.Application
         Dim xlsWB As Excel.Workbook
         Dim xlsSheet As Excel.Worksheet
@@ -68,7 +68,7 @@ Module Module1
         templatefilename = templatefilename.Replace(".xlsx", "")
         templatefilename = templatefilename.Replace(".xls", "")
         Dim myfilename As String = templatefilename & " " & currentDate.ToString("MM-dd-yyyy hh-mm-ss") & ".xlsx"
-        MsgBox(myfilename & " is successfully created!")
+        MsgBox(myfilename & " is successfully exported!")
         xlsSheet.Protect(strpassword)
         xlsApp.ActiveWindow.View = Excel.XlWindowView.xlPageLayoutView
         xlsApp.ActiveWindow.DisplayGridlines = False
@@ -76,24 +76,41 @@ Module Module1
         If page = 1 Then
             xlsFiles &= "Best_Selling_Products\"
             xlsWB.SaveAs(xlsFiles & myfilename)
+            xlsApp.Quit()
+            releaseObject(xlsApp)
+            releaseObject(xlsWB)
+            releaseObject(xlsSheet)
         ElseIf page = 2 Then
             xlsFiles &= "Product_Sales\"
             xlsWB.SaveAs(xlsFiles & myfilename)
+            xlsApp.Quit()
+            releaseObject(xlsApp)
+            releaseObject(xlsWB)
+            releaseObject(xlsSheet)
         ElseIf page = 3 Then
             xlsFiles &= "Product_Inventory\"
             xlsWB.SaveAs(xlsFiles & myfilename)
+            xlsApp.Quit()
+            releaseObject(xlsApp)
+            releaseObject(xlsWB)
+            releaseObject(xlsSheet)
         ElseIf page = 4 Then
             xlsFiles &= "Product_Transactions\"
             xlsWB.SaveAs(xlsFiles & myfilename)
+            xlsApp.Quit()
+            releaseObject(xlsApp)
+            releaseObject(xlsWB)
+            releaseObject(xlsSheet)
         ElseIf page = 5 Then
             xlsFiles &= "Users\"
             xlsWB.SaveAs(xlsFiles & myfilename)
+            xlsApp.Quit()
+            releaseObject(xlsApp)
+            releaseObject(xlsWB)
+            releaseObject(xlsSheet)
         End If
 
-        xlsApp.Quit()
-        releaseObject(xlsApp)
-        releaseObject(xlsWB)
-        releaseObject(xlsSheet)
+
 
     End Sub
 
