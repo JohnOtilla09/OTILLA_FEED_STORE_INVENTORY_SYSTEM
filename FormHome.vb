@@ -3,6 +3,25 @@ Imports MySql.Data.MySqlClient
 
 Public Class FormHome
     Private Sub FormHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        With Me
+
+            Call Connect_to_DB()
+            Dim mycmd As New MySqlCommand
+            Dim myreader As MySqlDataReader
+
+            Try
+                strSQL = "select total_income as amount from total_icome_per_type_of_animal_foods"
+                mycmd.CommandText = strSQL
+                mycmd.Connection = myconn
+                mycmd.ExecuteNonQuery()
+
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+
+
+        End With
+
         displayBestSellingProducts()
     End Sub
 

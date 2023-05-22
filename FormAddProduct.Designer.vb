@@ -34,6 +34,8 @@ Partial Class FormAddProduct
         cancelBtn = New Button()
         IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
         typeTxt = New ComboBox()
+        Label6 = New Label()
+        brandTxt = New TextBox()
         CType(IconPictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -43,7 +45,7 @@ Partial Class FormAddProduct
         Label1.BackColor = Color.White
         Label1.Font = New Font("Arial", 12F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Label1.ForeColor = Color.FromArgb(CByte(197), CByte(95), CByte(252))
-        Label1.Location = New Point(442, 50)
+        Label1.Location = New Point(554, 57)
         Label1.Name = "Label1"
         Label1.Size = New Size(129, 24)
         Label1.TabIndex = 0
@@ -54,7 +56,7 @@ Partial Class FormAddProduct
         prodTxt.Font = New Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point)
         prodTxt.Location = New Point(554, 117)
         prodTxt.Name = "prodTxt"
-        prodTxt.PlaceholderText = "Enter product"
+        prodTxt.PlaceholderText = "L 3000"
         prodTxt.Size = New Size(231, 30)
         prodTxt.TabIndex = 1
         ' 
@@ -73,7 +75,7 @@ Partial Class FormAddProduct
         Label3.AccessibleName = ""
         Label3.AutoSize = True
         Label3.Font = New Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        Label3.Location = New Point(442, 183)
+        Label3.Location = New Point(442, 167)
         Label3.Name = "Label3"
         Label3.Size = New Size(53, 23)
         Label3.TabIndex = 4
@@ -83,7 +85,7 @@ Partial Class FormAddProduct
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        Label4.Location = New Point(442, 250)
+        Label4.Location = New Point(442, 271)
         Label4.Name = "Label4"
         Label4.Size = New Size(83, 23)
         Label4.TabIndex = 6
@@ -92,17 +94,17 @@ Partial Class FormAddProduct
         ' quantityTxt
         ' 
         quantityTxt.Font = New Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        quantityTxt.Location = New Point(544, 246)
+        quantityTxt.Location = New Point(554, 267)
         quantityTxt.Name = "quantityTxt"
-        quantityTxt.PlaceholderText = "Per sack"
-        quantityTxt.Size = New Size(241, 30)
+        quantityTxt.PlaceholderText = "Number of Sack"
+        quantityTxt.Size = New Size(231, 30)
         quantityTxt.TabIndex = 5
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        Label5.Location = New Point(442, 313)
+        Label5.Location = New Point(442, 318)
         Label5.Name = "Label5"
         Label5.Size = New Size(55, 23)
         Label5.TabIndex = 8
@@ -111,8 +113,9 @@ Partial Class FormAddProduct
         ' priceTxt
         ' 
         priceTxt.Font = New Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        priceTxt.Location = New Point(554, 313)
+        priceTxt.Location = New Point(554, 318)
         priceTxt.Name = "priceTxt"
+        priceTxt.PlaceholderText = "2500"
         priceTxt.Size = New Size(231, 30)
         priceTxt.TabIndex = 7
         ' 
@@ -120,7 +123,7 @@ Partial Class FormAddProduct
         ' 
         addBtn.BackColor = Color.FromArgb(CByte(117), CByte(230), CByte(218))
         addBtn.ForeColor = Color.Black
-        addBtn.Location = New Point(442, 381)
+        addBtn.Location = New Point(442, 384)
         addBtn.Name = "addBtn"
         addBtn.Size = New Size(116, 41)
         addBtn.TabIndex = 9
@@ -131,7 +134,7 @@ Partial Class FormAddProduct
         ' 
         cancelBtn.BackColor = Color.FromArgb(CByte(117), CByte(230), CByte(218))
         cancelBtn.ForeColor = Color.Black
-        cancelBtn.Location = New Point(669, 381)
+        cancelBtn.Location = New Point(669, 384)
         cancelBtn.Name = "cancelBtn"
         cancelBtn.Size = New Size(116, 41)
         cancelBtn.TabIndex = 10
@@ -158,10 +161,29 @@ Partial Class FormAddProduct
         ' 
         typeTxt.DisplayMember = "jfb"
         typeTxt.FormattingEnabled = True
-        typeTxt.Location = New Point(554, 183)
+        typeTxt.Location = New Point(554, 167)
         typeTxt.Name = "typeTxt"
         typeTxt.Size = New Size(231, 28)
         typeTxt.TabIndex = 13
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        Label6.Location = New Point(442, 221)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(62, 23)
+        Label6.TabIndex = 15
+        Label6.Text = "Brand"
+        ' 
+        ' brandTxt
+        ' 
+        brandTxt.Font = New Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        brandTxt.Location = New Point(554, 217)
+        brandTxt.Name = "brandTxt"
+        brandTxt.PlaceholderText = "BMEG"
+        brandTxt.Size = New Size(231, 30)
+        brandTxt.TabIndex = 14
         ' 
         ' FormAddProduct
         ' 
@@ -169,6 +191,8 @@ Partial Class FormAddProduct
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(826, 512)
+        Controls.Add(Label6)
+        Controls.Add(brandTxt)
         Controls.Add(typeTxt)
         Controls.Add(IconPictureBox1)
         Controls.Add(cancelBtn)
@@ -201,4 +225,6 @@ Partial Class FormAddProduct
     Friend WithEvents cancelBtn As Button
     Friend WithEvents IconPictureBox1 As FontAwesome.Sharp.IconPictureBox
     Friend WithEvents typeTxt As ComboBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents brandTxt As TextBox
 End Class

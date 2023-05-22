@@ -22,169 +22,202 @@ Partial Class FormTransaction
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.exportBtn = New System.Windows.Forms.Button()
-        Me.updateBtn = New System.Windows.Forms.Button()
-        Me.uploadBtn = New System.Windows.Forms.Button()
-        Me.searchButton = New FontAwesome.Sharp.IconButton()
-        Me.addBtn = New System.Windows.Forms.Button()
-        Me.searchTxt = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.dgTransactionReport = New System.Windows.Forms.DataGridView()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Panel1.SuspendLayout()
-        CType(Me.dgTransactionReport, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'Panel1
-        '
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel1.Controls.Add(Me.exportBtn)
-        Me.Panel1.Controls.Add(Me.updateBtn)
-        Me.Panel1.Controls.Add(Me.uploadBtn)
-        Me.Panel1.Controls.Add(Me.searchButton)
-        Me.Panel1.Controls.Add(Me.addBtn)
-        Me.Panel1.Controls.Add(Me.searchTxt)
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.dgTransactionReport)
-        Me.Panel1.Location = New System.Drawing.Point(-24, 60)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1293, 648)
-        Me.Panel1.TabIndex = 17
-        '
-        'exportBtn
-        '
-        Me.exportBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.exportBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.exportBtn.Location = New System.Drawing.Point(728, 335)
-        Me.exportBtn.Name = "exportBtn"
-        Me.exportBtn.Size = New System.Drawing.Size(257, 65)
-        Me.exportBtn.TabIndex = 19
-        Me.exportBtn.Text = "Export"
-        Me.exportBtn.UseVisualStyleBackColor = False
-        '
-        'updateBtn
-        '
-        Me.updateBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.updateBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.updateBtn.Location = New System.Drawing.Point(728, 193)
-        Me.updateBtn.Name = "updateBtn"
-        Me.updateBtn.Size = New System.Drawing.Size(257, 65)
-        Me.updateBtn.TabIndex = 21
-        Me.updateBtn.Text = "Update"
-        Me.updateBtn.UseVisualStyleBackColor = False
-        '
-        'uploadBtn
-        '
-        Me.uploadBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.uploadBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.uploadBtn.Location = New System.Drawing.Point(728, 264)
-        Me.uploadBtn.Name = "uploadBtn"
-        Me.uploadBtn.Size = New System.Drawing.Size(257, 65)
-        Me.uploadBtn.TabIndex = 20
-        Me.uploadBtn.Text = "Import"
-        Me.uploadBtn.UseVisualStyleBackColor = False
-        '
-        'searchButton
-        '
-        Me.searchButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.searchButton.FlatAppearance.BorderSize = 0
-        Me.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.searchButton.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.searchButton.ForeColor = System.Drawing.Color.White
-        Me.searchButton.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass
-        Me.searchButton.IconColor = System.Drawing.Color.White
-        Me.searchButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.searchButton.IconSize = 25
-        Me.searchButton.Location = New System.Drawing.Point(304, 71)
-        Me.searchButton.Name = "searchButton"
-        Me.searchButton.Size = New System.Drawing.Size(116, 41)
-        Me.searchButton.TabIndex = 19
-        Me.searchButton.Text = "Search"
-        Me.searchButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.searchButton.UseVisualStyleBackColor = False
-        '
-        'addBtn
-        '
-        Me.addBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.addBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.addBtn.Location = New System.Drawing.Point(728, 122)
-        Me.addBtn.Name = "addBtn"
-        Me.addBtn.Size = New System.Drawing.Size(257, 65)
-        Me.addBtn.TabIndex = 16
-        Me.addBtn.Text = "Add"
-        Me.addBtn.UseVisualStyleBackColor = False
-        '
-        'searchTxt
-        '
-        Me.searchTxt.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.searchTxt.Location = New System.Drawing.Point(63, 75)
-        Me.searchTxt.Name = "searchTxt"
-        Me.searchTxt.Size = New System.Drawing.Size(235, 34)
-        Me.searchTxt.TabIndex = 18
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label5.Font = New System.Drawing.Font("Bernard MT Condensed", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(420, 18)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(262, 36)
-        Me.Label5.TabIndex = 12
-        Me.Label5.Text = "Customer Transaction"
-        '
-        'dgTransactionReport
-        '
-        Me.dgTransactionReport.BackgroundColor = System.Drawing.Color.White
-        Me.dgTransactionReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(5)
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgTransactionReport.DefaultCellStyle = DataGridViewCellStyle1
-        Me.dgTransactionReport.Location = New System.Drawing.Point(63, 122)
-        Me.dgTransactionReport.Name = "dgTransactionReport"
-        Me.dgTransactionReport.RowHeadersWidth = 51
-        Me.dgTransactionReport.RowTemplate.Height = 29
-        Me.dgTransactionReport.Size = New System.Drawing.Size(596, 452)
-        Me.dgTransactionReport.TabIndex = 11
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(41, 22)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(146, 27)
-        Me.Label2.TabIndex = 16
-        Me.Label2.Text = "Transaction"
-        '
-        'FormTransaction
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(1011, 673)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Label2)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "FormTransaction"
-        Me.Text = "FormTransaction"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        CType(Me.dgTransactionReport, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Panel1 = New Panel()
+        refreshBtn = New FontAwesome.Sharp.IconButton()
+        deleteBtn = New Button()
+        exportBtn = New Button()
+        updateBtn = New Button()
+        uploadBtn = New Button()
+        searchButton = New FontAwesome.Sharp.IconButton()
+        addBtn = New Button()
+        searchTxt = New TextBox()
+        Label5 = New Label()
+        dgTransactionReport = New DataGridView()
+        Label2 = New Label()
+        Panel1.SuspendLayout()
+        CType(dgTransactionReport, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' Panel1
+        ' 
+        Panel1.BorderStyle = BorderStyle.Fixed3D
+        Panel1.Controls.Add(refreshBtn)
+        Panel1.Controls.Add(deleteBtn)
+        Panel1.Controls.Add(exportBtn)
+        Panel1.Controls.Add(updateBtn)
+        Panel1.Controls.Add(uploadBtn)
+        Panel1.Controls.Add(searchButton)
+        Panel1.Controls.Add(addBtn)
+        Panel1.Controls.Add(searchTxt)
+        Panel1.Controls.Add(Label5)
+        Panel1.Controls.Add(dgTransactionReport)
+        Panel1.Location = New Point(-24, 60)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(1293, 648)
+        Panel1.TabIndex = 17
+        ' 
+        ' refreshBtn
+        ' 
+        refreshBtn.Cursor = Cursors.Hand
+        refreshBtn.FlatAppearance.BorderSize = 0
+        refreshBtn.FlatStyle = FlatStyle.Flat
+        refreshBtn.Font = New Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        refreshBtn.ForeColor = Color.White
+        refreshBtn.IconChar = FontAwesome.Sharp.IconChar.ArrowRightRotate
+        refreshBtn.IconColor = Color.White
+        refreshBtn.IconFont = FontAwesome.Sharp.IconFont.Auto
+        refreshBtn.IconSize = 25
+        refreshBtn.Location = New Point(555, 83)
+        refreshBtn.Name = "refreshBtn"
+        refreshBtn.Size = New Size(116, 41)
+        refreshBtn.TabIndex = 23
+        refreshBtn.Text = "Refresh"
+        refreshBtn.TextImageRelation = TextImageRelation.ImageBeforeText
+        refreshBtn.UseVisualStyleBackColor = True
+        ' 
+        ' deleteBtn
+        ' 
+        deleteBtn.BackColor = Color.FromArgb(CByte(117), CByte(230), CByte(218))
+        deleteBtn.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        deleteBtn.Location = New Point(728, 264)
+        deleteBtn.Name = "deleteBtn"
+        deleteBtn.Size = New Size(257, 65)
+        deleteBtn.TabIndex = 22
+        deleteBtn.Text = "Delete"
+        deleteBtn.UseVisualStyleBackColor = False
+        ' 
+        ' exportBtn
+        ' 
+        exportBtn.BackColor = Color.FromArgb(CByte(117), CByte(230), CByte(218))
+        exportBtn.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        exportBtn.Location = New Point(728, 406)
+        exportBtn.Name = "exportBtn"
+        exportBtn.Size = New Size(257, 65)
+        exportBtn.TabIndex = 19
+        exportBtn.Text = "Export"
+        exportBtn.UseVisualStyleBackColor = False
+        ' 
+        ' updateBtn
+        ' 
+        updateBtn.BackColor = Color.FromArgb(CByte(117), CByte(230), CByte(218))
+        updateBtn.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        updateBtn.Location = New Point(728, 193)
+        updateBtn.Name = "updateBtn"
+        updateBtn.Size = New Size(257, 65)
+        updateBtn.TabIndex = 21
+        updateBtn.Text = "Update"
+        updateBtn.UseVisualStyleBackColor = False
+        ' 
+        ' uploadBtn
+        ' 
+        uploadBtn.BackColor = Color.FromArgb(CByte(117), CByte(230), CByte(218))
+        uploadBtn.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        uploadBtn.Location = New Point(728, 335)
+        uploadBtn.Name = "uploadBtn"
+        uploadBtn.Size = New Size(257, 65)
+        uploadBtn.TabIndex = 20
+        uploadBtn.Text = "Import"
+        uploadBtn.UseVisualStyleBackColor = False
+        ' 
+        ' searchButton
+        ' 
+        searchButton.BackColor = SystemColors.ActiveCaptionText
+        searchButton.FlatAppearance.BorderSize = 0
+        searchButton.FlatStyle = FlatStyle.Flat
+        searchButton.Font = New Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        searchButton.ForeColor = Color.White
+        searchButton.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass
+        searchButton.IconColor = Color.White
+        searchButton.IconFont = FontAwesome.Sharp.IconFont.Auto
+        searchButton.IconSize = 25
+        searchButton.Location = New Point(316, 83)
+        searchButton.Name = "searchButton"
+        searchButton.Size = New Size(116, 41)
+        searchButton.TabIndex = 19
+        searchButton.Text = "Search"
+        searchButton.TextImageRelation = TextImageRelation.ImageBeforeText
+        searchButton.UseVisualStyleBackColor = False
+        ' 
+        ' addBtn
+        ' 
+        addBtn.BackColor = Color.FromArgb(CByte(117), CByte(230), CByte(218))
+        addBtn.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        addBtn.Location = New Point(728, 122)
+        addBtn.Name = "addBtn"
+        addBtn.Size = New Size(257, 65)
+        addBtn.TabIndex = 16
+        addBtn.Text = "Add"
+        addBtn.UseVisualStyleBackColor = False
+        ' 
+        ' searchTxt
+        ' 
+        searchTxt.Font = New Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        searchTxt.Location = New Point(75, 87)
+        searchTxt.Name = "searchTxt"
+        searchTxt.Size = New Size(235, 34)
+        searchTxt.TabIndex = 18
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.BackColor = SystemColors.ActiveCaptionText
+        Label5.Font = New Font("Bernard MT Condensed", 18F, FontStyle.Regular, GraphicsUnit.Point)
+        Label5.ForeColor = Color.FromArgb(CByte(197), CByte(95), CByte(252))
+        Label5.Location = New Point(420, 18)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(262, 36)
+        Label5.TabIndex = 12
+        Label5.Text = "Customer Transaction"
+        ' 
+        ' dgTransactionReport
+        ' 
+        dgTransactionReport.BackgroundColor = Color.White
+        dgTransactionReport.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Window
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle1.Padding = New Padding(5)
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.False
+        dgTransactionReport.DefaultCellStyle = DataGridViewCellStyle1
+        dgTransactionReport.Location = New Point(75, 142)
+        dgTransactionReport.Name = "dgTransactionReport"
+        dgTransactionReport.RowHeadersWidth = 51
+        dgTransactionReport.RowTemplate.Height = 29
+        dgTransactionReport.Size = New Size(596, 415)
+        dgTransactionReport.TabIndex = 11
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.BackColor = SystemColors.ActiveCaptionText
+        Label2.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        Label2.ForeColor = Color.FromArgb(CByte(197), CByte(95), CByte(252))
+        Label2.Location = New Point(41, 22)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(146, 27)
+        Label2.TabIndex = 16
+        Label2.Text = "Transaction"
+        ' 
+        ' FormTransaction
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackColor = SystemColors.ActiveCaptionText
+        ClientSize = New Size(1011, 673)
+        Controls.Add(Panel1)
+        Controls.Add(Label2)
+        FormBorderStyle = FormBorderStyle.None
+        Name = "FormTransaction"
+        Text = "FormTransaction"
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
+        CType(dgTransactionReport, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents Panel1 As Panel
@@ -197,4 +230,7 @@ Partial Class FormTransaction
     Friend WithEvents uploadBtn As Button
     Friend WithEvents updateBtn As Button
     Friend WithEvents exportBtn As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents refreshBtn As FontAwesome.Sharp.IconButton
+    Friend WithEvents deleteBtn As Button
 End Class

@@ -10,6 +10,8 @@ Public Class Login
     ' Subsequently, My.User will return identity information encapsulated in the CustomPrincipal object
     ' such as the username, display name, etc.
 
+    Public id = 0
+
     Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
         Me.Hide()
         AddUsers.Show()
@@ -21,8 +23,7 @@ Public Class Login
             Dim mycmd As New MySqlCommand
             Dim myreader As MySqlDataReader
 
-
-            strSQL = "Select * from users where username = '" _
+            strSQL = "Select user_id as id from users where username = '" _
                 & .UsernameTextBox.Text & "' and password = md5('" _
                 & .PasswordTextBox.Text & "')"
 
@@ -32,6 +33,8 @@ Public Class Login
 
             myreader = mycmd.ExecuteReader
             If myreader.HasRows Then
+                myreader.Read()
+                id = myreader.GetString("id")
                 Call Disconnect_to_DB()
                 .Hide()
                 FormLandingPage.Show()

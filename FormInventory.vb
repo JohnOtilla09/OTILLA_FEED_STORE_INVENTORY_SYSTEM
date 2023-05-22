@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Imports MySql.Data.MySqlClient
+Imports Mysqlx.Crud
 
 Public Class FormInventory
 
@@ -45,20 +46,18 @@ Public Class FormInventory
     End Sub
 
     Private Sub FormInventory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        inventoryTable()
-
+        strSQL = "select products.prod_id as ID, products.prod_name as Product_Name, types.type as Type, products.brand as Brand, products.stock as Stocks, products.price as Price" &
+                " from products" &
+                " inner join types" &
+                " on products.type_id = types.type_id"
+        inventoryTable(strSQL)
     End Sub
 
-    Private Sub inventoryTable()
+    Function inventoryTable(strSQL As String)
         Dim myreader As MySqlDataReader
         Dim mycommand As New MySqlCommand
         Dim mydataAdapter As New MySqlDataAdapter
         Dim mydatatable As New DataTable
-
-        strSQL = "select products.prod_name as Product_Name, types.type as Type, products.brand as Brand, products.stock as Stocks, products.price as Price" &
-                " from products" &
-                " inner join types" &
-                " on products.type_id = types.type_id"
 
         Connect_to_DB()
         With Me
@@ -69,28 +68,92 @@ Public Class FormInventory
                 mydatatable = New DataTable
 
                 myreader.Close()
-                mydataAdapter.SelectCommand = mycommand
 
+                mydataAdapter.SelectCommand = mycommand
+                Disconnect_to_DB()
                 mydataAdapter.Fill(mydatatable)
                 .dgInventoryTable.AutoSize = False
-                .dgInventoryTable.Refresh()
                 .dgInventoryTable.EndEdit()
                 .dgInventoryTable.DataSource = mydatatable
                 .dgInventoryTable.ReadOnly = True
                 .dgInventoryTable.ScrollBars = ScrollBars.Both
                 .dgInventoryTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells
-
             Catch ex As MySqlException
                 MsgBox(ex.Message, MsgBoxStyle.Critical, "Error on SQL query")
             End Try
             myreader = Nothing
             mycommand = Nothing
+        End With
+    End Function
+
+    Private Sub refreshBtn_Click(sender As Object, e As EventArgs) Handles refreshBtn.Click
+        strSQL = "select products.prod_id as ID, products.prod_name as Product_Name, types.type as Type, products.brand as Brand, products.stock as Stocks, products.price as Price" &
+                " from products" &
+                " inner join types" &
+                " on products.type_id = types.type_id"
+        inventoryTable(strSQL)
+    End Sub
+
+    Private Sub dgInventoryTable_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgInventoryTable.CellContentClick
+        FormUpdateProduct.typeUpTxt.DropDownStyle = ComboBoxStyle.DropDownList
+        FormUpdateProduct.typeUpTxt.Items.Add("Chicken")
+        FormUpdateProduct.typeUpTxt.Items.Add("Pig")
+        FormUpdateProduct.typeUpTxt.Items.Add("Dog")
+        FormUpdateProduct.typeUpTxt.Items.Add("Cat")
+
+        Dim index As Integer
+        index = e.RowIndex
+        Dim selectedRow As DataGridViewRow
+        selectedRow = dgInventoryTable.Rows(index)
+        MessageBox.Show(index)
+        FormUpdateProduct.prod_id = selectedRow.Cells(0).Value.ToString()
+        FormUpdateProduct.prodUpTxt.Text = selectedRow.Cells(1).Value.ToString()
+        If FormUpdateProduct.typeUpTxt.Items.Contains(selectedRow.Cells(2).Value.ToString()) Then
+            FormUpdateProduct.typeUpTxt.Items.Remove(selectedRow.Cells(2).Value.ToString())
+            FormUpdateProduct.typeUpTxt.Items.Insert(0, selectedRow.Cells(2).Value.ToString())
+            FormUpdateProduct.typeUpTxt.SelectedIndex = 0
+        End If
+        FormUpdateProduct.brandUpTxt.Text = selectedRow.Cells(3).Value.ToString()
+        FormUpdateProduct.quantityUpTxt.Text = selectedRow.Cells(4).Value.ToString()
+        FormUpdateProduct.priceUpTxt.Text = selectedRow.Cells(5).Value.ToString()
+    End Sub
+
+    Private Sub exportBtn_Click_1(sender As Object, e As EventArgs) Handles exportBtn.Click
+        Call importToExcel(Me.dgInventoryTable, "Product_Inventory.xlsx", 3)
+    End Sub
+
+    Private Sub deleteBtn_Click(sender As Object, e As EventArgs) Handles deleteBtn.Click
+        Dim id As String = FormUpdateProduct.prod_id
+
+        With Me
+
+            Call Connect_to_DB()
+            Dim mycmd As New MySqlCommand
+            Try
+                strSQL = "DELETE FROM products WHERE prod_id = " & id
+                mycmd.CommandText = strSQL
+                mycmd.Connection = myconn
+                mycmd.ExecuteNonQuery()
+                MessageBox.Show("Product deleted successfully")
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+
             Disconnect_to_DB()
+
+            strSQL = "select products.prod_id as ID, products.prod_name as Product_Name, types.type as Type, products.brand as Brand, products.stock as Stocks, products.price as Price" &
+                " from products" &
+                " inner join types" &
+                " on products.type_id = types.type_id"
+            inventoryTable(strSQL)
         End With
     End Sub
 
-    Private Sub exportBtn_Click(sender As Object, e As EventArgs) Handles exportBtn.Click
-        Call importToExcel(Me.dgInventoryTable, "Product_Inventory.xlsx", 3)
+    Private Sub searchButton_Click(sender As Object, e As EventArgs) Handles searchButton.Click
+        Dim search = searchTxt.Text
+
+        strSQL = "select * from products where prod_name = '" & search & "'"
+        inventoryTable(strSQL)
     End Sub
 End Class
 

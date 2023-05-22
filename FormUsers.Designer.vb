@@ -22,159 +22,166 @@ Partial Class FormUsers
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.exportBtn = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.addBtn = New System.Windows.Forms.Button()
-        Me.dgUserTable = New System.Windows.Forms.DataGridView()
-        Me.searchButton = New FontAwesome.Sharp.IconButton()
-        Me.searchTxt = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Panel1.SuspendLayout()
-        CType(Me.dgUserTable, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'Panel1
-        '
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel1.Controls.Add(Me.exportBtn)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.addBtn)
-        Me.Panel1.Controls.Add(Me.dgUserTable)
-        Me.Panel1.Controls.Add(Me.searchButton)
-        Me.Panel1.Controls.Add(Me.searchTxt)
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Location = New System.Drawing.Point(-22, 59)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1011, 673)
-        Me.Panel1.TabIndex = 19
-        '
-        'exportBtn
-        '
-        Me.exportBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.exportBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.exportBtn.Location = New System.Drawing.Point(689, 363)
-        Me.exportBtn.Name = "exportBtn"
-        Me.exportBtn.Size = New System.Drawing.Size(257, 65)
-        Me.exportBtn.TabIndex = 24
-        Me.exportBtn.Text = "Export"
-        Me.exportBtn.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.Button2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button2.Location = New System.Drawing.Point(689, 292)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(257, 65)
-        Me.Button2.TabIndex = 23
-        Me.Button2.Text = "Delete"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.Button1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.Location = New System.Drawing.Point(689, 221)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(257, 65)
-        Me.Button1.TabIndex = 22
-        Me.Button1.Text = "Update"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'addBtn
-        '
-        Me.addBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.addBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.addBtn.Location = New System.Drawing.Point(689, 150)
-        Me.addBtn.Name = "addBtn"
-        Me.addBtn.Size = New System.Drawing.Size(257, 65)
-        Me.addBtn.TabIndex = 21
-        Me.addBtn.Text = "Add"
-        Me.addBtn.UseVisualStyleBackColor = False
-        '
-        'dgUserTable
-        '
-        Me.dgUserTable.BackgroundColor = System.Drawing.Color.White
-        Me.dgUserTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgUserTable.Location = New System.Drawing.Point(63, 150)
-        Me.dgUserTable.Name = "dgUserTable"
-        Me.dgUserTable.RowHeadersWidth = 51
-        Me.dgUserTable.RowTemplate.Height = 29
-        Me.dgUserTable.Size = New System.Drawing.Size(575, 428)
-        Me.dgUserTable.TabIndex = 20
-        '
-        'searchButton
-        '
-        Me.searchButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.searchButton.FlatAppearance.BorderSize = 0
-        Me.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.searchButton.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.searchButton.ForeColor = System.Drawing.Color.White
-        Me.searchButton.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass
-        Me.searchButton.IconColor = System.Drawing.Color.White
-        Me.searchButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.searchButton.IconSize = 25
-        Me.searchButton.Location = New System.Drawing.Point(304, 92)
-        Me.searchButton.Name = "searchButton"
-        Me.searchButton.Size = New System.Drawing.Size(116, 41)
-        Me.searchButton.TabIndex = 19
-        Me.searchButton.Text = "Search"
-        Me.searchButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.searchButton.UseVisualStyleBackColor = False
-        '
-        'searchTxt
-        '
-        Me.searchTxt.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.searchTxt.Location = New System.Drawing.Point(63, 99)
-        Me.searchTxt.Name = "searchTxt"
-        Me.searchTxt.Size = New System.Drawing.Size(235, 34)
-        Me.searchTxt.TabIndex = 18
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label5.Font = New System.Drawing.Font("Bernard MT Condensed", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(404, 39)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(169, 36)
-        Me.Label5.TabIndex = 12
-        Me.Label5.Text = "User Accounts"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(43, 21)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(77, 27)
-        Me.Label2.TabIndex = 18
-        Me.Label2.Text = "Users"
-        '
-        'FormUsers
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(993, 651)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Label2)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "FormUsers"
-        Me.Text = "FormUsers"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        CType(Me.dgUserTable, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
+        Panel1 = New Panel()
+        refreshBtn = New FontAwesome.Sharp.IconButton()
+        exportBtn = New Button()
+        deleteBtn = New Button()
+        updateBtn = New Button()
+        dgUserTable = New DataGridView()
+        searchButton = New FontAwesome.Sharp.IconButton()
+        searchTxt = New TextBox()
+        Label5 = New Label()
+        Label2 = New Label()
+        Panel1.SuspendLayout()
+        CType(dgUserTable, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' Panel1
+        ' 
+        Panel1.BorderStyle = BorderStyle.Fixed3D
+        Panel1.Controls.Add(refreshBtn)
+        Panel1.Controls.Add(exportBtn)
+        Panel1.Controls.Add(deleteBtn)
+        Panel1.Controls.Add(updateBtn)
+        Panel1.Controls.Add(dgUserTable)
+        Panel1.Controls.Add(searchButton)
+        Panel1.Controls.Add(searchTxt)
+        Panel1.Controls.Add(Label5)
+        Panel1.Location = New Point(-22, 59)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(1011, 673)
+        Panel1.TabIndex = 19
+        ' 
+        ' refreshBtn
+        ' 
+        refreshBtn.Cursor = Cursors.Hand
+        refreshBtn.FlatAppearance.BorderSize = 0
+        refreshBtn.FlatStyle = FlatStyle.Flat
+        refreshBtn.Font = New Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        refreshBtn.ForeColor = Color.White
+        refreshBtn.IconChar = FontAwesome.Sharp.IconChar.ArrowRightRotate
+        refreshBtn.IconColor = Color.White
+        refreshBtn.IconFont = FontAwesome.Sharp.IconFont.Auto
+        refreshBtn.IconSize = 25
+        refreshBtn.Location = New Point(522, 92)
+        refreshBtn.Name = "refreshBtn"
+        refreshBtn.Size = New Size(116, 41)
+        refreshBtn.TabIndex = 25
+        refreshBtn.Text = "Refresh"
+        refreshBtn.TextImageRelation = TextImageRelation.ImageBeforeText
+        refreshBtn.UseVisualStyleBackColor = True
+        ' 
+        ' exportBtn
+        ' 
+        exportBtn.BackColor = Color.FromArgb(CByte(117), CByte(230), CByte(218))
+        exportBtn.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        exportBtn.Location = New Point(693, 292)
+        exportBtn.Name = "exportBtn"
+        exportBtn.Size = New Size(257, 65)
+        exportBtn.TabIndex = 24
+        exportBtn.Text = "Export"
+        exportBtn.UseVisualStyleBackColor = False
+        ' 
+        ' deleteBtn
+        ' 
+        deleteBtn.BackColor = Color.FromArgb(CByte(117), CByte(230), CByte(218))
+        deleteBtn.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        deleteBtn.Location = New Point(693, 221)
+        deleteBtn.Name = "deleteBtn"
+        deleteBtn.Size = New Size(257, 65)
+        deleteBtn.TabIndex = 23
+        deleteBtn.Text = "Delete"
+        deleteBtn.UseVisualStyleBackColor = False
+        ' 
+        ' updateBtn
+        ' 
+        updateBtn.BackColor = Color.FromArgb(CByte(117), CByte(230), CByte(218))
+        updateBtn.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        updateBtn.Location = New Point(693, 150)
+        updateBtn.Name = "updateBtn"
+        updateBtn.Size = New Size(257, 65)
+        updateBtn.TabIndex = 22
+        updateBtn.Text = "Update"
+        updateBtn.UseVisualStyleBackColor = False
+        ' 
+        ' dgUserTable
+        ' 
+        dgUserTable.BackgroundColor = Color.White
+        dgUserTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgUserTable.Location = New Point(63, 150)
+        dgUserTable.Name = "dgUserTable"
+        dgUserTable.RowHeadersWidth = 51
+        dgUserTable.RowTemplate.Height = 29
+        dgUserTable.Size = New Size(575, 428)
+        dgUserTable.TabIndex = 20
+        ' 
+        ' searchButton
+        ' 
+        searchButton.BackColor = SystemColors.ActiveCaptionText
+        searchButton.FlatAppearance.BorderSize = 0
+        searchButton.FlatStyle = FlatStyle.Flat
+        searchButton.Font = New Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        searchButton.ForeColor = Color.White
+        searchButton.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass
+        searchButton.IconColor = Color.White
+        searchButton.IconFont = FontAwesome.Sharp.IconFont.Auto
+        searchButton.IconSize = 25
+        searchButton.Location = New Point(304, 92)
+        searchButton.Name = "searchButton"
+        searchButton.Size = New Size(116, 41)
+        searchButton.TabIndex = 19
+        searchButton.Text = "Search"
+        searchButton.TextImageRelation = TextImageRelation.ImageBeforeText
+        searchButton.UseVisualStyleBackColor = False
+        ' 
+        ' searchTxt
+        ' 
+        searchTxt.Font = New Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        searchTxt.Location = New Point(63, 99)
+        searchTxt.Name = "searchTxt"
+        searchTxt.Size = New Size(235, 34)
+        searchTxt.TabIndex = 18
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.BackColor = SystemColors.ActiveCaptionText
+        Label5.Font = New Font("Bernard MT Condensed", 18F, FontStyle.Regular, GraphicsUnit.Point)
+        Label5.ForeColor = Color.FromArgb(CByte(197), CByte(95), CByte(252))
+        Label5.Location = New Point(404, 39)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(169, 36)
+        Label5.TabIndex = 12
+        Label5.Text = "User Accounts"
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.BackColor = SystemColors.ActiveCaptionText
+        Label2.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        Label2.ForeColor = Color.FromArgb(CByte(197), CByte(95), CByte(252))
+        Label2.Location = New Point(43, 21)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(77, 27)
+        Label2.TabIndex = 18
+        Label2.Text = "Users"
+        ' 
+        ' FormUsers
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackColor = SystemColors.ActiveCaptionText
+        ClientSize = New Size(993, 651)
+        Controls.Add(Panel1)
+        Controls.Add(Label2)
+        FormBorderStyle = FormBorderStyle.None
+        Name = "FormUsers"
+        Text = "FormUsers"
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
+        CType(dgUserTable, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents Panel1 As Panel
@@ -183,8 +190,8 @@ Partial Class FormUsers
     Friend WithEvents searchButton As FontAwesome.Sharp.IconButton
     Friend WithEvents searchTxt As TextBox
     Friend WithEvents dgUserTable As DataGridView
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents addBtn As Button
+    Friend WithEvents deleteBtn As Button
+    Friend WithEvents updateBtn As Button
     Friend WithEvents exportBtn As Button
+    Friend WithEvents refreshBtn As FontAwesome.Sharp.IconButton
 End Class

@@ -22,168 +22,203 @@ Partial Class FormInventory
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.exportBtn = New System.Windows.Forms.Button()
-        Me.backUpBtn = New System.Windows.Forms.Button()
-        Me.searchButton = New FontAwesome.Sharp.IconButton()
-        Me.addBtn = New System.Windows.Forms.Button()
-        Me.searchTxt = New System.Windows.Forms.TextBox()
-        Me.updateBtn = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.dgInventoryTable = New System.Windows.Forms.DataGridView()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Panel1.SuspendLayout()
-        CType(Me.dgInventoryTable, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'Panel1
-        '
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel1.Controls.Add(Me.exportBtn)
-        Me.Panel1.Controls.Add(Me.backUpBtn)
-        Me.Panel1.Controls.Add(Me.searchButton)
-        Me.Panel1.Controls.Add(Me.addBtn)
-        Me.Panel1.Controls.Add(Me.searchTxt)
-        Me.Panel1.Controls.Add(Me.updateBtn)
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.dgInventoryTable)
-        Me.Panel1.Location = New System.Drawing.Point(-23, 60)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1293, 648)
-        Me.Panel1.TabIndex = 15
-        '
-        'exportBtn
-        '
-        Me.exportBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.exportBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.exportBtn.Location = New System.Drawing.Point(729, 260)
-        Me.exportBtn.Name = "exportBtn"
-        Me.exportBtn.Size = New System.Drawing.Size(257, 65)
-        Me.exportBtn.TabIndex = 18
-        Me.exportBtn.Text = "Export"
-        Me.exportBtn.UseVisualStyleBackColor = False
-        '
-        'backUpBtn
-        '
-        Me.backUpBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.backUpBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.backUpBtn.Location = New System.Drawing.Point(729, 331)
-        Me.backUpBtn.Name = "backUpBtn"
-        Me.backUpBtn.Size = New System.Drawing.Size(257, 65)
-        Me.backUpBtn.TabIndex = 18
-        Me.backUpBtn.Text = "Backup Database"
-        Me.backUpBtn.UseVisualStyleBackColor = False
-        '
-        'searchButton
-        '
-        Me.searchButton.FlatAppearance.BorderSize = 0
-        Me.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.searchButton.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.searchButton.ForeColor = System.Drawing.Color.White
-        Me.searchButton.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass
-        Me.searchButton.IconColor = System.Drawing.Color.White
-        Me.searchButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.searchButton.IconSize = 25
-        Me.searchButton.Location = New System.Drawing.Point(304, 68)
-        Me.searchButton.Name = "searchButton"
-        Me.searchButton.Size = New System.Drawing.Size(116, 41)
-        Me.searchButton.TabIndex = 17
-        Me.searchButton.Text = "Search"
-        Me.searchButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.searchButton.UseVisualStyleBackColor = True
-        '
-        'addBtn
-        '
-        Me.addBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.addBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.addBtn.Location = New System.Drawing.Point(729, 118)
-        Me.addBtn.Name = "addBtn"
-        Me.addBtn.Size = New System.Drawing.Size(257, 65)
-        Me.addBtn.TabIndex = 16
-        Me.addBtn.Text = "Add"
-        Me.addBtn.UseVisualStyleBackColor = False
-        '
-        'searchTxt
-        '
-        Me.searchTxt.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.searchTxt.Location = New System.Drawing.Point(63, 72)
-        Me.searchTxt.Name = "searchTxt"
-        Me.searchTxt.Size = New System.Drawing.Size(235, 34)
-        Me.searchTxt.TabIndex = 16
-        '
-        'updateBtn
-        '
-        Me.updateBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.updateBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.updateBtn.Location = New System.Drawing.Point(729, 189)
-        Me.updateBtn.Name = "updateBtn"
-        Me.updateBtn.Size = New System.Drawing.Size(257, 65)
-        Me.updateBtn.TabIndex = 15
-        Me.updateBtn.Text = "Update"
-        Me.updateBtn.UseVisualStyleBackColor = False
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label5.Font = New System.Drawing.Font("Bernard MT Condensed", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(430, 19)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(222, 36)
-        Me.Label5.TabIndex = 12
-        Me.Label5.Text = "Product Inventory"
-        '
-        'dgInventoryTable
-        '
-        Me.dgInventoryTable.BackgroundColor = System.Drawing.Color.White
-        Me.dgInventoryTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(5)
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgInventoryTable.DefaultCellStyle = DataGridViewCellStyle1
-        Me.dgInventoryTable.Location = New System.Drawing.Point(63, 118)
-        Me.dgInventoryTable.Name = "dgInventoryTable"
-        Me.dgInventoryTable.RowHeadersWidth = 51
-        Me.dgInventoryTable.RowTemplate.Height = 29
-        Me.dgInventoryTable.Size = New System.Drawing.Size(629, 463)
-        Me.dgInventoryTable.TabIndex = 11
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(42, 22)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(117, 27)
-        Me.Label2.TabIndex = 14
-        Me.Label2.Text = "Inventory"
-        '
-        'FormInventory
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(1011, 673)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Label2)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "FormInventory"
-        Me.Text = "FormInventory"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        CType(Me.dgInventoryTable, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Panel1 = New Panel()
+        exportBtn = New Button()
+        refreshBtn = New FontAwesome.Sharp.IconButton()
+        deleteBtn = New Button()
+        backUpBtn = New Button()
+        searchButton = New FontAwesome.Sharp.IconButton()
+        addBtn = New Button()
+        searchTxt = New TextBox()
+        updateBtn = New Button()
+        Label5 = New Label()
+        dgInventoryTable = New DataGridView()
+        Label2 = New Label()
+        Panel1.SuspendLayout()
+        CType(dgInventoryTable, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' Panel1
+        ' 
+        Panel1.BorderStyle = BorderStyle.Fixed3D
+        Panel1.Controls.Add(exportBtn)
+        Panel1.Controls.Add(refreshBtn)
+        Panel1.Controls.Add(deleteBtn)
+        Panel1.Controls.Add(backUpBtn)
+        Panel1.Controls.Add(searchButton)
+        Panel1.Controls.Add(addBtn)
+        Panel1.Controls.Add(searchTxt)
+        Panel1.Controls.Add(updateBtn)
+        Panel1.Controls.Add(Label5)
+        Panel1.Controls.Add(dgInventoryTable)
+        Panel1.Location = New Point(-23, 60)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(1293, 648)
+        Panel1.TabIndex = 15
+        ' 
+        ' exportBtn
+        ' 
+        exportBtn.BackColor = Color.FromArgb(CByte(117), CByte(230), CByte(218))
+        exportBtn.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        exportBtn.Location = New Point(729, 260)
+        exportBtn.Name = "exportBtn"
+        exportBtn.Size = New Size(257, 65)
+        exportBtn.TabIndex = 20
+        exportBtn.Text = "Export"
+        exportBtn.UseVisualStyleBackColor = False
+        ' 
+        ' refreshBtn
+        ' 
+        refreshBtn.Cursor = Cursors.Hand
+        refreshBtn.FlatAppearance.BorderSize = 0
+        refreshBtn.FlatStyle = FlatStyle.Flat
+        refreshBtn.Font = New Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        refreshBtn.ForeColor = Color.White
+        refreshBtn.IconChar = FontAwesome.Sharp.IconChar.ArrowRightRotate
+        refreshBtn.IconColor = Color.White
+        refreshBtn.IconFont = FontAwesome.Sharp.IconFont.Auto
+        refreshBtn.IconSize = 25
+        refreshBtn.Location = New Point(576, 86)
+        refreshBtn.Name = "refreshBtn"
+        refreshBtn.Size = New Size(116, 41)
+        refreshBtn.TabIndex = 19
+        refreshBtn.Text = "Refresh"
+        refreshBtn.TextImageRelation = TextImageRelation.ImageBeforeText
+        refreshBtn.UseVisualStyleBackColor = True
+        ' 
+        ' deleteBtn
+        ' 
+        deleteBtn.BackColor = Color.FromArgb(CByte(117), CByte(230), CByte(218))
+        deleteBtn.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        deleteBtn.Location = New Point(729, 331)
+        deleteBtn.Name = "deleteBtn"
+        deleteBtn.Size = New Size(257, 65)
+        deleteBtn.TabIndex = 18
+        deleteBtn.Text = "Delete"
+        deleteBtn.UseVisualStyleBackColor = False
+        ' 
+        ' backUpBtn
+        ' 
+        backUpBtn.BackColor = Color.FromArgb(CByte(117), CByte(230), CByte(218))
+        backUpBtn.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        backUpBtn.Location = New Point(729, 402)
+        backUpBtn.Name = "backUpBtn"
+        backUpBtn.Size = New Size(257, 65)
+        backUpBtn.TabIndex = 18
+        backUpBtn.Text = "Backup Database"
+        backUpBtn.UseVisualStyleBackColor = False
+        ' 
+        ' searchButton
+        ' 
+        searchButton.FlatAppearance.BorderSize = 0
+        searchButton.FlatStyle = FlatStyle.Flat
+        searchButton.Font = New Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        searchButton.ForeColor = Color.White
+        searchButton.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass
+        searchButton.IconColor = Color.White
+        searchButton.IconFont = FontAwesome.Sharp.IconFont.Auto
+        searchButton.IconSize = 25
+        searchButton.Location = New Point(304, 89)
+        searchButton.Name = "searchButton"
+        searchButton.Size = New Size(116, 41)
+        searchButton.TabIndex = 17
+        searchButton.Text = "Search"
+        searchButton.TextImageRelation = TextImageRelation.ImageBeforeText
+        searchButton.UseVisualStyleBackColor = True
+        ' 
+        ' addBtn
+        ' 
+        addBtn.BackColor = Color.FromArgb(CByte(117), CByte(230), CByte(218))
+        addBtn.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        addBtn.Location = New Point(729, 118)
+        addBtn.Name = "addBtn"
+        addBtn.Size = New Size(257, 65)
+        addBtn.TabIndex = 16
+        addBtn.Text = "Add"
+        addBtn.UseVisualStyleBackColor = False
+        ' 
+        ' searchTxt
+        ' 
+        searchTxt.Font = New Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        searchTxt.Location = New Point(63, 93)
+        searchTxt.Name = "searchTxt"
+        searchTxt.PlaceholderText = "Search products..."
+        searchTxt.Size = New Size(235, 34)
+        searchTxt.TabIndex = 16
+        ' 
+        ' updateBtn
+        ' 
+        updateBtn.BackColor = Color.FromArgb(CByte(117), CByte(230), CByte(218))
+        updateBtn.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        updateBtn.Location = New Point(729, 189)
+        updateBtn.Name = "updateBtn"
+        updateBtn.Size = New Size(257, 65)
+        updateBtn.TabIndex = 15
+        updateBtn.Text = "Update"
+        updateBtn.UseVisualStyleBackColor = False
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.BackColor = SystemColors.ActiveCaptionText
+        Label5.Font = New Font("Bernard MT Condensed", 18F, FontStyle.Regular, GraphicsUnit.Point)
+        Label5.ForeColor = Color.FromArgb(CByte(197), CByte(95), CByte(252))
+        Label5.Location = New Point(430, 19)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(222, 36)
+        Label5.TabIndex = 12
+        Label5.Text = "Product Inventory"
+        ' 
+        ' dgInventoryTable
+        ' 
+        dgInventoryTable.BackgroundColor = Color.White
+        dgInventoryTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Window
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle1.Padding = New Padding(5)
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.False
+        dgInventoryTable.DefaultCellStyle = DataGridViewCellStyle1
+        dgInventoryTable.Location = New Point(63, 136)
+        dgInventoryTable.Name = "dgInventoryTable"
+        dgInventoryTable.RowHeadersWidth = 51
+        dgInventoryTable.RowTemplate.Height = 29
+        dgInventoryTable.Size = New Size(629, 444)
+        dgInventoryTable.TabIndex = 11
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.BackColor = SystemColors.ActiveCaptionText
+        Label2.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        Label2.ForeColor = Color.FromArgb(CByte(197), CByte(95), CByte(252))
+        Label2.Location = New Point(42, 22)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(117, 27)
+        Label2.TabIndex = 14
+        Label2.Text = "Inventory"
+        ' 
+        ' FormInventory
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackColor = SystemColors.ActiveCaptionText
+        ClientSize = New Size(1011, 673)
+        Controls.Add(Panel1)
+        Controls.Add(Label2)
+        FormBorderStyle = FormBorderStyle.None
+        Name = "FormInventory"
+        RightToLeftLayout = True
+        Text = "FormInventory"
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
+        CType(dgInventoryTable, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents Panel1 As Panel
@@ -195,5 +230,7 @@ Partial Class FormInventory
     Friend WithEvents searchButton As FontAwesome.Sharp.IconButton
     Friend WithEvents searchTxt As TextBox
     Friend WithEvents backUpBtn As Button
+    Friend WithEvents deleteBtn As Button
+    Friend WithEvents refreshBtn As FontAwesome.Sharp.IconButton
     Friend WithEvents exportBtn As Button
 End Class
