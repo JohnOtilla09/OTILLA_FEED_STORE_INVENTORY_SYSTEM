@@ -29,129 +29,128 @@ Partial Class Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.UsernameLabel = New System.Windows.Forms.Label()
-        Me.PasswordLabel = New System.Windows.Forms.Label()
-        Me.UsernameTextBox = New System.Windows.Forms.TextBox()
-        Me.PasswordTextBox = New System.Windows.Forms.TextBox()
-        Me.OK = New System.Windows.Forms.Button()
-        Me.Cancel = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
-        CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'UsernameLabel
-        '
-        Me.UsernameLabel.Location = New System.Drawing.Point(344, 110)
-        Me.UsernameLabel.Name = "UsernameLabel"
-        Me.UsernameLabel.Size = New System.Drawing.Size(220, 23)
-        Me.UsernameLabel.TabIndex = 0
-        Me.UsernameLabel.Text = "&User name"
-        Me.UsernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'PasswordLabel
-        '
-        Me.PasswordLabel.Location = New System.Drawing.Point(344, 182)
-        Me.PasswordLabel.Name = "PasswordLabel"
-        Me.PasswordLabel.Size = New System.Drawing.Size(220, 23)
-        Me.PasswordLabel.TabIndex = 2
-        Me.PasswordLabel.Text = "&Password"
-        Me.PasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'UsernameTextBox
-        '
-        Me.UsernameTextBox.Font = New System.Drawing.Font("Arial", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.UsernameTextBox.Location = New System.Drawing.Point(346, 130)
-        Me.UsernameTextBox.Name = "UsernameTextBox"
-        Me.UsernameTextBox.Size = New System.Drawing.Size(276, 39)
-        Me.UsernameTextBox.TabIndex = 1
-        '
-        'PasswordTextBox
-        '
-        Me.PasswordTextBox.Font = New System.Drawing.Font("Arial", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.PasswordTextBox.Location = New System.Drawing.Point(346, 202)
-        Me.PasswordTextBox.Name = "PasswordTextBox"
-        Me.PasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.PasswordTextBox.Size = New System.Drawing.Size(276, 39)
-        Me.PasswordTextBox.TabIndex = 3
-        '
-        'OK
-        '
-        Me.OK.BackColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.OK.Location = New System.Drawing.Point(346, 264)
-        Me.OK.Name = "OK"
-        Me.OK.Size = New System.Drawing.Size(116, 41)
-        Me.OK.TabIndex = 4
-        Me.OK.Text = "Login"
-        Me.OK.UseVisualStyleBackColor = False
-        '
-        'Cancel
-        '
-        Me.Cancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Cancel.Location = New System.Drawing.Point(506, 264)
-        Me.Cancel.Name = "Cancel"
-        Me.Cancel.Size = New System.Drawing.Size(116, 41)
-        Me.Cancel.TabIndex = 5
-        Me.Cancel.Text = "Register"
-        Me.Cancel.UseVisualStyleBackColor = False
-        '
-        'Label2
-        '
-        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.White
-        Me.Label2.Font = New System.Drawing.Font("Arial", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point)
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(346, 47)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 24)
-        Me.Label2.TabIndex = 7
-        Me.Label2.Text = "Login"
-        '
-        'IconPictureBox1
-        '
-        Me.IconPictureBox1.BackColor = System.Drawing.Color.White
-        Me.IconPictureBox1.BackgroundImage = Global.Otilla_Inventory.My.Resources.Resources.undraw_Login_re_4vu21
-        Me.IconPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.IconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.IconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.IconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText
-        Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconPictureBox1.IconSize = 274
-        Me.IconPictureBox1.Location = New System.Drawing.Point(12, 31)
-        Me.IconPictureBox1.Name = "IconPictureBox1"
-        Me.IconPictureBox1.Size = New System.Drawing.Size(328, 274)
-        Me.IconPictureBox1.TabIndex = 8
-        Me.IconPictureBox1.TabStop = False
-        '
-        'Login
-        '
-        Me.AcceptButton = Me.OK
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
-        Me.CancelButton = Me.Cancel
-        Me.ClientSize = New System.Drawing.Size(660, 337)
-        Me.Controls.Add(Me.IconPictureBox1)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Cancel)
-        Me.Controls.Add(Me.OK)
-        Me.Controls.Add(Me.PasswordTextBox)
-        Me.Controls.Add(Me.UsernameTextBox)
-        Me.Controls.Add(Me.PasswordLabel)
-        Me.Controls.Add(Me.UsernameLabel)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
-        Me.Name = "Login"
-        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Login"
-        CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
+        UsernameLabel = New Label()
+        PasswordLabel = New Label()
+        UsernameTextBox = New TextBox()
+        PasswordTextBox = New TextBox()
+        OK = New Button()
+        Cancel = New Button()
+        Label2 = New Label()
+        IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
+        CType(IconPictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' UsernameLabel
+        ' 
+        UsernameLabel.Location = New Point(344, 110)
+        UsernameLabel.Name = "UsernameLabel"
+        UsernameLabel.Size = New Size(220, 23)
+        UsernameLabel.TabIndex = 0
+        UsernameLabel.Text = "&User name"
+        UsernameLabel.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' PasswordLabel
+        ' 
+        PasswordLabel.Location = New Point(344, 182)
+        PasswordLabel.Name = "PasswordLabel"
+        PasswordLabel.Size = New Size(220, 23)
+        PasswordLabel.TabIndex = 2
+        PasswordLabel.Text = "&Password"
+        PasswordLabel.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' UsernameTextBox
+        ' 
+        UsernameTextBox.Font = New Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point)
+        UsernameTextBox.Location = New Point(346, 130)
+        UsernameTextBox.Name = "UsernameTextBox"
+        UsernameTextBox.Size = New Size(276, 39)
+        UsernameTextBox.TabIndex = 1
+        ' 
+        ' PasswordTextBox
+        ' 
+        PasswordTextBox.Font = New Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point)
+        PasswordTextBox.Location = New Point(346, 202)
+        PasswordTextBox.Name = "PasswordTextBox"
+        PasswordTextBox.PasswordChar = "*"c
+        PasswordTextBox.Size = New Size(276, 39)
+        PasswordTextBox.TabIndex = 3
+        ' 
+        ' OK
+        ' 
+        OK.BackColor = Color.FromArgb(CByte(117), CByte(230), CByte(218))
+        OK.Location = New Point(346, 264)
+        OK.Name = "OK"
+        OK.Size = New Size(116, 41)
+        OK.TabIndex = 4
+        OK.Text = "Login"
+        OK.UseVisualStyleBackColor = False
+        ' 
+        ' Cancel
+        ' 
+        Cancel.BackColor = Color.FromArgb(CByte(117), CByte(230), CByte(218))
+        Cancel.DialogResult = DialogResult.Cancel
+        Cancel.Location = New Point(506, 264)
+        Cancel.Name = "Cancel"
+        Cancel.Size = New Size(116, 41)
+        Cancel.TabIndex = 5
+        Cancel.Text = "Register"
+        Cancel.UseVisualStyleBackColor = False
+        ' 
+        ' Label2
+        ' 
+        Label2.Anchor = AnchorStyles.Top
+        Label2.AutoSize = True
+        Label2.BackColor = Color.White
+        Label2.Font = New Font("Arial", 12F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label2.ForeColor = Color.FromArgb(CByte(197), CByte(95), CByte(252))
+        Label2.Location = New Point(455, 35)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(64, 24)
+        Label2.TabIndex = 7
+        Label2.Text = "Login"
+        ' 
+        ' IconPictureBox1
+        ' 
+        IconPictureBox1.BackColor = Color.White
+        IconPictureBox1.BackgroundImage = My.Resources.Resources.otilla_feed_store_logo
+        IconPictureBox1.BackgroundImageLayout = ImageLayout.Stretch
+        IconPictureBox1.ForeColor = SystemColors.ControlText
+        IconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.None
+        IconPictureBox1.IconColor = SystemColors.ControlText
+        IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto
+        IconPictureBox1.IconSize = 433
+        IconPictureBox1.Location = New Point(-113, -50)
+        IconPictureBox1.Name = "IconPictureBox1"
+        IconPictureBox1.Size = New Size(551, 433)
+        IconPictureBox1.TabIndex = 8
+        IconPictureBox1.TabStop = False
+        ' 
+        ' Login
+        ' 
+        AcceptButton = OK
+        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.White
+        CancelButton = Cancel
+        ClientSize = New Size(660, 337)
+        Controls.Add(Label2)
+        Controls.Add(Cancel)
+        Controls.Add(OK)
+        Controls.Add(PasswordTextBox)
+        Controls.Add(UsernameTextBox)
+        Controls.Add(PasswordLabel)
+        Controls.Add(UsernameLabel)
+        Controls.Add(IconPictureBox1)
+        FormBorderStyle = FormBorderStyle.FixedDialog
+        MaximizeBox = False
+        MinimizeBox = False
+        Name = "Login"
+        SizeGripStyle = SizeGripStyle.Hide
+        StartPosition = FormStartPosition.CenterParent
+        Text = "Login"
+        CType(IconPictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
     Friend WithEvents Label2 As Label
     Friend WithEvents IconPictureBox1 As FontAwesome.Sharp.IconPictureBox

@@ -125,6 +125,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property otilla_feed_store_logo() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("otilla-feed-store-logo", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property undraw_add_information_j2wg() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("undraw_add_information_j2wg", resourceCulture)

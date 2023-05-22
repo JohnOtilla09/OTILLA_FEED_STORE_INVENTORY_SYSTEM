@@ -37,21 +37,21 @@ Partial Class FormHome
         Panel6 = New Panel()
         IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
         Panel3 = New Panel()
-        c = New Label()
+        chickenLabel = New Label()
         Label10 = New Label()
         Label4 = New Label()
         Panel4 = New Panel()
+        doglabel = New Label()
         Label9 = New Label()
         Label3 = New Label()
         Panel5 = New Panel()
+        catLabel = New Label()
         Label8 = New Label()
         Label6 = New Label()
         Panel2 = New Panel()
         piglabel = New Label()
         Label7 = New Label()
         Label2 = New Label()
-        Label11 = New Label()
-        Label12 = New Label()
         CType(dgBestSellingProductsTable, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         Panel7.SuspendLayout()
@@ -246,7 +246,7 @@ Partial Class FormHome
         ' 
         Panel3.BackColor = Color.White
         Panel3.BorderStyle = BorderStyle.Fixed3D
-        Panel3.Controls.Add(c)
+        Panel3.Controls.Add(chickenLabel)
         Panel3.Controls.Add(Label10)
         Panel3.Controls.Add(Label4)
         Panel3.Location = New Point(293, 37)
@@ -254,16 +254,16 @@ Partial Class FormHome
         Panel3.Size = New Size(213, 112)
         Panel3.TabIndex = 9
         ' 
-        ' c
+        ' chickenLabel
         ' 
-        c.AutoSize = True
-        c.Font = New Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        c.Location = New Point(107, 78)
-        c.Name = "c"
-        c.Size = New Size(82, 23)
-        c.TabIndex = 18
-        c.Text = "Amount:"
-        c.TextAlign = ContentAlignment.BottomCenter
+        chickenLabel.AutoSize = True
+        chickenLabel.Font = New Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        chickenLabel.Location = New Point(107, 76)
+        chickenLabel.Name = "chickenLabel"
+        chickenLabel.Size = New Size(21, 23)
+        chickenLabel.TabIndex = 18
+        chickenLabel.Text = "0"
+        chickenLabel.TextAlign = ContentAlignment.BottomCenter
         ' 
         ' Label10
         ' 
@@ -291,13 +291,24 @@ Partial Class FormHome
         ' 
         Panel4.BackColor = Color.White
         Panel4.BorderStyle = BorderStyle.Fixed3D
-        Panel4.Controls.Add(Label11)
+        Panel4.Controls.Add(doglabel)
         Panel4.Controls.Add(Label9)
         Panel4.Controls.Add(Label3)
         Panel4.Location = New Point(532, 37)
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(213, 112)
         Panel4.TabIndex = 9
+        ' 
+        ' doglabel
+        ' 
+        doglabel.AutoSize = True
+        doglabel.Font = New Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        doglabel.Location = New Point(113, 76)
+        doglabel.Name = "doglabel"
+        doglabel.Size = New Size(21, 23)
+        doglabel.TabIndex = 19
+        doglabel.Text = "0"
+        doglabel.TextAlign = ContentAlignment.BottomCenter
         ' 
         ' Label9
         ' 
@@ -325,13 +336,24 @@ Partial Class FormHome
         ' 
         Panel5.BackColor = Color.White
         Panel5.BorderStyle = BorderStyle.Fixed3D
-        Panel5.Controls.Add(Label12)
+        Panel5.Controls.Add(catLabel)
         Panel5.Controls.Add(Label8)
         Panel5.Controls.Add(Label6)
         Panel5.Location = New Point(765, 37)
         Panel5.Name = "Panel5"
         Panel5.Size = New Size(213, 112)
         Panel5.TabIndex = 9
+        ' 
+        ' catLabel
+        ' 
+        catLabel.AutoSize = True
+        catLabel.Font = New Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        catLabel.Location = New Point(112, 76)
+        catLabel.Name = "catLabel"
+        catLabel.Size = New Size(21, 23)
+        catLabel.TabIndex = 20
+        catLabel.Text = "0"
+        catLabel.TextAlign = ContentAlignment.BottomCenter
         ' 
         ' Label8
         ' 
@@ -371,11 +393,11 @@ Partial Class FormHome
         ' 
         piglabel.AutoSize = True
         piglabel.Font = New Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        piglabel.Location = New Point(111, 76)
+        piglabel.Location = New Point(112, 76)
         piglabel.Name = "piglabel"
-        piglabel.Size = New Size(82, 23)
+        piglabel.Size = New Size(21, 23)
         piglabel.TabIndex = 15
-        piglabel.Text = "Amount:"
+        piglabel.Text = "0"
         piglabel.TextAlign = ContentAlignment.BottomCenter
         ' 
         ' Label7
@@ -399,28 +421,6 @@ Partial Class FormHome
         Label2.TabIndex = 13
         Label2.Text = "PIG"
         Label2.TextAlign = ContentAlignment.BottomCenter
-        ' 
-        ' Label11
-        ' 
-        Label11.AutoSize = True
-        Label11.Font = New Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        Label11.Location = New Point(113, 76)
-        Label11.Name = "Label11"
-        Label11.Size = New Size(82, 23)
-        Label11.TabIndex = 19
-        Label11.Text = "Amount:"
-        Label11.TextAlign = ContentAlignment.BottomCenter
-        ' 
-        ' Label12
-        ' 
-        Label12.AutoSize = True
-        Label12.Font = New Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        Label12.Location = New Point(112, 76)
-        Label12.Name = "Label12"
-        Label12.Size = New Size(82, 23)
-        Label12.TabIndex = 20
-        Label12.Text = "Amount:"
-        Label12.TextAlign = ContentAlignment.BottomCenter
         ' 
         ' FormHome
         ' 
@@ -485,4 +485,7 @@ Partial Class FormHome
     Friend WithEvents piglabel As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
+    Friend WithEvents chickenLabel As Label
+    Friend WithEvents doglabel As Label
+    Friend WithEvents catLabel As Label
 End Class

@@ -49,7 +49,7 @@ Partial Class FormUsers
         Panel1.Controls.Add(Label5)
         Panel1.Location = New Point(-22, 59)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1011, 673)
+        Panel1.Size = New Size(1065, 673)
         Panel1.TabIndex = 19
         ' 
         ' refreshBtn
@@ -139,6 +139,7 @@ Partial Class FormUsers
         searchTxt.Font = New Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
         searchTxt.Location = New Point(63, 99)
         searchTxt.Name = "searchTxt"
+        searchTxt.PlaceholderText = "Search name..."
         searchTxt.Size = New Size(235, 34)
         searchTxt.TabIndex = 18
         ' 

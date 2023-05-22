@@ -55,7 +55,6 @@ Public Class FormUsers
         Dim index As Integer
         index = e.RowIndex
         Dim selectedRow As DataGridViewRow
-        selectedRow = dgUserTable.Rows(index)
         MessageBox.Show(index)
         FormUpdateUser.user_id = selectedRow.Cells(0).Value.ToString()
         FormUpdateUser.lastnameTxt.Text = selectedRow.Cells(1).Value.ToString()

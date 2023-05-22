@@ -155,6 +155,7 @@ Partial Class FormTransaction
         searchTxt.Font = New Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
         searchTxt.Location = New Point(75, 87)
         searchTxt.Name = "searchTxt"
+        searchTxt.PlaceholderText = "Search date..."
         searchTxt.Size = New Size(235, 34)
         searchTxt.TabIndex = 18
         ' 

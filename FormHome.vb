@@ -10,11 +10,35 @@ Public Class FormHome
             Dim myreader As MySqlDataReader
 
             Try
-                strSQL = "select total_income as amount from total_icome_per_type_of_animal_foods"
+                strSQL = "SELECT total_income FROM total_icome_per_type_of_animal_foods"
                 mycmd.CommandText = strSQL
                 mycmd.Connection = myconn
-                mycmd.ExecuteNonQuery()
 
+                myreader = mycmd.ExecuteReader()
+
+                Dim incomeArray As New List(Of Integer)() ' Create a list to store the values
+
+                If myreader.HasRows Then
+                    While myreader.Read()
+                        Dim amount As Integer = myreader("total_income")
+                        incomeArray.Add(amount) ' Add the value to the list
+                    End While
+                End If
+
+                chickenLabel.Text = incomeArray(0)
+                piglabel.Text = incomeArray(1)
+                doglabel.Text = incomeArray(2)
+                catLabel.Text = incomeArray(3)
+
+                myreader.Close()
+                mycmd.Dispose()
+                myconn.Close()
+
+                Dim incomeArrayAsArray() As Integer = incomeArray.ToArray()
+
+                For Each amount As Integer In incomeArrayAsArray
+                    Console.WriteLine("Amount: " & amount)
+                Next
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try

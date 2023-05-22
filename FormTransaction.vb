@@ -124,7 +124,6 @@ Public Class FormTransaction
         Dim index As Integer
         index = e.RowIndex
         Dim selectedRow As DataGridViewRow
-        selectedRow = dgTransactionReport.Rows(index)
         MessageBox.Show(index)
         FormUpdateTransaction.transact_id = selectedRow.Cells(0).Value.ToString()
         FormUpdateTransaction.prodTxt.Text = selectedRow.Cells(3).Value.ToString()

@@ -104,7 +104,6 @@ Public Class FormInventory
         Dim index As Integer
         index = e.RowIndex
         Dim selectedRow As DataGridViewRow
-        selectedRow = dgInventoryTable.Rows(index)
         MessageBox.Show(index)
         FormUpdateProduct.prod_id = selectedRow.Cells(0).Value.ToString()
         FormUpdateProduct.prodUpTxt.Text = selectedRow.Cells(1).Value.ToString()
